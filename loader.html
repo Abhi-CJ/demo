@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <style>
+        .loader-page{
+            display: flex;
+            height: 100vh;
+
+            justify-self: center;
+            align-items: center;
+       
+        }
+        .loader{
+            border: 5px solid black;
+            border-top: 5px solid red;
+                    
+            border-radius: 50%; 
+            width: 50px;
+            animation: ttt 3s ease-in  infinite;
+            
+
+
+        }
+        @keyframes ttt {
+            0%{
+                transform: rotate(0deg);
+            }
+            
+            100%{
+
+                transform: rotate(360deg);
+            }
+        }
+         body{
+            background: radial-gradient(circle, #654ea3, #eaafc8,green);
+
+
+         }
+        
+    </style>
+</head>
+<body>
+<div class = 'loader-page'>
+    <div class="loader"></div>
+</div>
+</body>
+
+</html>
