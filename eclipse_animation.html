@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eclipse Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+      }
+
+     div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+         
+        
+      }
+      h1{
+        text-align: center;
+        font-family: monospace;
+        font-size: 4vw;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+
+      }
+      .eclipse {
+        height: 80vh;
+      }
+      .box {
+        width: 50vw;
+        max-width: 400px;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: yellow;
+        animation: Abhi 3s linear 3s infinite;
+      }
+      .sun {
+        background-color: tomato;
+        position: relative;
+        width: 50%;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .dark-night {
+        background-color: black;
+        position: absolute;
+        border-radius: 50%;
+        animation: dark 3s linear 1s infinite;
+      }
+      @keyframes Abhi {
+        0% {
+          background-color: yellow;
+        }
+        60% {
+          background-color: black;
+        }
+        100% {
+          background-color: yellow;
+        }
+      }
+      @keyframes dark {
+        0% {
+          right: -25%;
+          width: 45%;
+          height: 30%;
+        }
+        70% {
+          right: 0;
+          width: 100%;
+          height: 100%;
+        }
+        100% {
+          right: 5%;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Eclipse Animation</h1>
+    <div class="eclipse">
+      <div class="box">
+        <div class="sun">
+          <div class="dark-night"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
